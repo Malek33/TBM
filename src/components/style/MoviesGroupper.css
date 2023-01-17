@@ -1,0 +1,89 @@
+.Movies-groupper-big-container{
+    color: white;
+    margin-right: 2vw;
+    margin-left: 2vw;
+}
+
+.h1-movie-groupper{
+    margin: 0;
+    font-size: 1.3vw;
+    transition: 0.5s ease-in-out;
+    position: relative;
+}
+
+.movie-groupper-genre-title-with-see-all-btn{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-right: 1vw;
+    cursor: pointer;
+    margin-bottom: 2vh;
+    font-size: 1vw;
+    transition: 0.5s ease-in-out;
+}
+
+.movie-groupper-genre-title-with-see-all-btn:hover .h1-movie-groupper{
+    color: red;
+    transition: 0.5s ease-in-out;
+}
+
+
+.movie-groupper-see-all-btn-with-icon{
+    display: flex;
+    align-items: center;
+    color: #414141;
+    transition: 0.3s ease-in-out;
+}
+
+.movie-groupper-genre-title-with-see-all-btn:hover .movie-groupper-see-all-btn-with-icon {
+    color: white;
+}
+
+.moviesGroupper-movies-caraousel-container{
+    position: relative;
+    display: flex;
+}
+
+.image-swiper-button-next{
+    cursor: pointer;
+    position: absolute;
+    right: -1vw;
+    top: 13vh;
+    color: #414141;
+    transition: 0.3s ease-in-out;
+}
+
+.image-swiper-button-next:hover{
+    color: white;
+}
+
+.image-swiper-button-prev{
+    cursor: pointer;
+    position: absolute;
+    left: -3vw;
+    top: 13vh;
+    color: #414141;
+    transition: 0.3s ease-in-out;
+}
+
+.image-swiper-button-prev:hover{
+    color: white;
+}
+
+.swiper-pagination-bullet-active {
+    background-color: red !important;
+}
+
+.swiper-pagination-bullet{
+    background-color: white;
+    width: 0.4vw;
+    height: 0.4vw;
+}
+
+.swiper-pagination{
+    margin: 0;
+    padding: 0;
+    top: 27vh;
+}
+
+

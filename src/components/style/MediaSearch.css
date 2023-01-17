@@ -1,0 +1,9 @@
+.MediaSearch-page{
+    color: white;
+}
+
+.MediaSearch-page-content{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}

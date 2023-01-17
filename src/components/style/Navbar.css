@@ -1,0 +1,174 @@
+.Nav{
+    background-color: #0d0c0f;
+    margin-left: 2vw;
+    color: #5e5e62;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    padding-bottom: 1vh;
+    width: 83vw;
+    z-index: 999;
+}
+
+.Nav-while-aside-menu-btn-clicked{
+    background-color: #0d0c0f;
+    margin-left: 2vw;
+    color: #5e5e62;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    padding-bottom: 1vh;
+    width: 94vw;
+    z-index: 10;
+}
+
+ul{
+    padding: 0;
+    margin: 0;
+}
+
+.ul-navbar{
+    display: flex;
+    list-style: none;
+    font-size: 0.9vw;
+}
+
+.ul-navbar li{
+    transition: 0.3s ease-in-out;
+}
+
+.ul-navbar li:hover{
+    color: white;
+}
+
+.icon-btn-beside-userpic-navbar{
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.icon-btn-beside-userpic-navbar:hover{
+    color: white;
+}
+
+.ul-navbar li{
+    margin-right: 2vw;
+    cursor: pointer;
+}
+
+.ul-navbar li .navbar-a-active{
+    color: white;
+}
+
+.image-profile-pic-navbar{
+    width: 2.7vw;
+    border-radius: 100%;
+    margin-right: 0.5vw;
+    margin-left: 1vw;
+}
+
+.searchbar-input{
+    border-width: 0.1vw;
+    border-color: #1a161f;
+    border-style: solid;
+    border-radius: 100vw;
+    height: 3vh;
+    width: 15vw;
+    font-size: 0.8vw;
+    background-color: #1a161f;
+    padding: 0.5vw 2.5vw 0.5vw 2.5vw;
+    outline: none;
+    color: white;
+    transition: 0.3s ease-in-out;
+}
+
+.searchbar-input:focus{
+    outline-color: #3b3b3d;
+    outline-style: solid;
+    outline-width: 0.1vw;
+}
+
+.Searchbar-icon{
+    position: absolute;
+    left: 0.7vw;
+}
+
+.Searchbar-filter-icon{
+    position: absolute;
+    right: 1vw;
+    cursor: pointer;
+    margin-right: 0.4vw;
+    transition: 0.3s ease-in-out;
+}
+
+.Searchbar-filter-icon:hover{
+    background-color: #0d0c0f;
+    margin-right: 0vw;
+    padding: 0.3vw 0.4vw 0.2vw 0.4vw;
+    border-radius: 100%;
+}
+
+.navbar-username{
+    color: white;
+    font-size: 1vw;
+}
+
+.navbar-usermail{
+    font-size: 0.7vw;
+}
+
+.navbar-usersection-name-image-mail{
+    width: 16vw;
+    margin-right: 2vw;
+    padding-top: 0.5vh;
+    padding-bottom: 0.5vh;
+    border-radius: 0.5vw;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.navbar-usersection-name-image-mail div label{
+    cursor: pointer;
+}
+
+.navbar-usersection-name-image-mail:hover{
+    background-color: #1a161f;
+}
+
+.hr-navBar{
+    border: none;
+    height: 0.2vh;
+    border-radius: 100vh;
+    background-color: #1a161f;
+    margin: 0.5vw 0vw 0.5vw 0vw;
+}
+
+.search-content-container{
+    background-color: black;
+    border-radius: 0.5vw;
+    padding: 1vw;
+    border: 0.1vw solid #5e5e62;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 7vh;
+    width: 18vw;
+    max-height: 50vh;
+    overflow-x: hidden;
+    overflow-y: auto;
+    z-index: 99999999;
+}
+
+.navbar-inner-search-results{
+    display: flex;
+    gap: 1vw;
+    margin-bottom: 2vh;
+}
+
+.navbar-search-results-details-image{
+    width: 4vw;
+    border-radius: 0.5vw;
+}

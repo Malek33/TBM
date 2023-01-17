@@ -1,0 +1,293 @@
+.MovieDetails-div-for-css{
+    color: white;
+    margin-top: -1.9vh;
+}
+
+.movie-details-big-backdrop-image{
+    width: 95vw;
+    height: 50vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    border-radius: 0vw 0vw 0vw 5vw;
+    opacity: 0.8;position: relative;
+}
+
+.movie-details-big-backdrop-image-show-asidemenu{
+    width: 85vw;
+    height: 50vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    border-radius: 0vw 0vw 0vw 5vw;
+    opacity: 0.8;position: relative;
+}
+
+.hide-aside-menu-movie-details-big-backdrop-image-shadow-effect{
+    background-image: linear-gradient(transparent, black);
+    width: 94.5vw;
+    height: 20vh;
+    opacity: 0.9;
+    position: absolute;
+    bottom: 0;
+    border-radius: 0vw 0vw 0vw 5vw;
+}
+
+.movie-details-big-backdrop-image-shadow-effect{
+    background-image: linear-gradient(transparent, black);
+    width: 83.5vw;
+    height: 20vh;
+    opacity: 0.9;
+    position: absolute;
+    bottom: 0;
+    border-radius: 0vw 0vw 0vw 5vw;
+}
+
+.movie-details-circularProgressbar-and-text-div{
+    position: absolute;
+    bottom: 7vh;
+    /* margin-left: -35vw; */
+    transform: scale(0.9);
+    display: flex;
+    margin-left: -2vw;
+}
+
+.movie-details-circularProgressbar{
+    width: 10vw;
+    height: 10vh;
+    font-weight: bolder;
+}
+
+.movie-details-text-div{
+    /* background-color: blue; */
+    width: 30vw;
+    margin-left: -3vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.movie-details-text-div h3{
+    margin: 0;
+    padding: 0;
+}
+
+.movie-details-text-div p{
+    margin: 0;
+    padding: 0;
+}
+
+.movie-details-play-trailer-btn-div-show-asidemenu{
+    position: absolute;
+    bottom: 0vh;
+    left:78vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5vw;
+    border: 0.1vw solid red;
+    border-radius: 100vw;
+    padding: 1vh 1.5vw;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.movie-details-play-trailer-btn-div-show-asidemenu:hover {
+    background-color: red;
+}
+
+.movie-details-play-trailer-btn-div-show-asidemenu:hover .movie-details-play-trailer-btn-text-div{
+    color: black;
+}
+
+.movie-details-play-trailer-btn-div-show-asidemenu:hover .movie-details-play-trailer-btn-icon-div{
+    color: white;
+}
+
+.movie-details-play-trailer-btn-div{
+    position: absolute;
+    bottom: 0vh;
+    left:51vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5vw;
+    border: 0.1vw solid red;
+    border-radius: 100vw;
+    padding: 1vh 1.5vw;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.movie-details-play-trailer-btn-icon-div{
+    color: red;
+    transition: 0.3s ease-in-out;
+}
+
+.movie-details-play-trailer-btn-text-div{
+    font-size: 1vw;
+    font-weight: bold;
+    user-select: none;
+    transition: 0.3s ease-in-out;
+}
+
+.movie-details-play-trailer-btn-div:hover {
+    background-color: red;
+}
+
+.movie-details-play-trailer-btn-div:hover .movie-details-play-trailer-btn-text-div{
+    color: black;
+}
+
+.movie-details-play-trailer-btn-div:hover .movie-details-play-trailer-btn-icon-div{
+    color: white;
+}
+
+.swiper-pagination-bullets-dynamic{
+    position: absolute;
+    top: 1vh;
+    margin-right: 10vw;
+}
+
+
+
+.movie-details-watch-poster-title-ex-container{
+    display: flex;
+    flex-direction: row;
+    gap: 2vw;
+    margin-top: 7vh;
+    margin-left: 6vw;
+}
+
+.movie-details-images-poster{
+    width: 9vw;
+    border-radius: 1vw;
+}
+
+.movie-details-title-btns-ex .movie-details-movie-types{
+    display: flex;
+    gap: 1vw;
+}
+
+.movie-details-movie-genres{
+    margin-bottom: 1vh;
+}
+
+.movie-details-movie-genres:hover{
+    text-decoration: underline;
+    cursor: pointer;
+    margin-bottom: 1vh;
+}
+
+.mySwiper-movie-details-backdrop-images{
+    border-radius: 0 0 0 5vw;
+}
+
+.movie-details-title-btns-ex .movie-details-btns{
+    display: flex;
+    gap: 2vw;
+    align-items: center;
+    margin-top: 2vh;
+}
+
+.movie-details-title-btns-ex .movie-details-btns a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5vw;
+    background-color: red;
+    padding: 0.5vw;
+    border-radius: 100vw;
+    cursor: pointer;
+}
+
+.movie-details-title-btns-ex .movie-details-btns a label{
+    padding-right: 0.5vw;
+    cursor: pointer;
+}
+
+.movie-details-content{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+}
+
+.movie-details-actorCards-container{
+    display: flex;
+    align-items: center;
+    margin-bottom: 1vh;
+}
+
+.movie-details-actorCards-pic{
+    border-radius: 100vw;
+    object-fit: cover;
+    width: 3vw;
+    height: 3vw;
+}
+
+.movie-details-actorCards-names{
+    width: 10vw;
+    margin-left: 1vw;
+    text-align: left;
+}
+
+.movie-details-actorCards-names p{
+    margin: 0.8vh;
+}
+
+.movie-details-actorCards-names :first-child{
+    color: red;
+    font-weight: bolder;
+}
+
+
+.show-aside-menu-movie-details-storyline-cast-container{
+    width: 55vw;
+    display: flex;
+    margin-left: 8vw;
+}
+
+.show-aside-menu-movie-details-storyline-cast-container table td{
+    padding: 2vw;
+}
+
+.movie-details-storyline-cast-container{
+    width: 65vw;
+    align-items: baseline;
+    display: flex;
+    margin-left: 8vw;
+}
+
+.movie-details-storyline-cast-container table td{
+    padding: 2vw;
+}
+
+.right-section{
+    position: absolute;
+    right: 0;
+    top: 5vh;
+    display: flex;
+    gap: 3vw;
+    margin-right: 2vw;
+}
+
+.movie-details-similar-movie-title-votes-container{
+    width: 10vw;
+    margin-left: 1vw;
+}
+
+.right-section hr{
+    opacity: 0.3;
+}
+
+.movie-details-similar-movie-images-poster{
+    width: 5vw;
+    border-radius: 1vw;
+}
+
+.watch-section-container{
+    width: 62.5vw;
+    display: flex;
+    justify-content: center;
+}
