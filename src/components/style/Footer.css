@@ -1,0 +1,23 @@
+.footerSection{
+    width: 99.5vw;
+    position: absolute;
+    color: aliceblue;
+    z-index: 1000;
+    background-color: #0d0c0f;
+}
+
+.footerSection-container{
+    margin: 10vh 0vw;
+    display: flex;
+    justify-content: center;
+    gap: 5vw;
+}
+
+.footerSection-container .footer-row{
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-socialmedia-icons-container{
+    display: flex;
+}

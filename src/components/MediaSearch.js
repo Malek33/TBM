@@ -6,6 +6,9 @@ import './style/MediaSearch.css'
 import MovieSmallCard from './MovieSmallCard';
 import { useParams } from 'react-router-dom';
 
+import poster404 from '../img/poster404.png'
+import LoadingCubes from './tools-components/loading-cubes/LoadingCubes';
+
 function MediaSearch() {
 
     useEffect(() => {
@@ -30,16 +33,23 @@ function MediaSearch() {
 
     return (
         <div className='MediaSearch-page'>
-            <h1>Search Results:</h1>
+            {
+              searchApiLoaded === false ?
+              <LoadingCubes/>
+              :
+              <div>
+                <h1>Search Results:</h1>
             { searchApiLoaded ?
             <div className='MediaSearch-page-content'>
-             {searchResults.map( item =>
-                 <MovieSmallCard title={item.title || item.original_title}
+             {searchResults.filter(item => item.media_type !== 'person' ? item : null).map( item =>
+                 <MovieSmallCard title={item.title || item.original_title || item.name}
                   mediaType={item.media_type} movieTypeIsAvailable={true}
                    movieId={item.id} releaseDate={item.release_date} rating={item.vote_average}
-                    image={`https://image.tmdb.org/t/p/original${item.poster_path}`} /> )}
+                    image={ item.poster_path === undefined || item.poster_path === null ? `${poster404}` : `https://image.tmdb.org/t/p/original${item.poster_path}`} /> )}
             </div>
                      : null }
+              </div>
+            }
         </div>
     )
 }

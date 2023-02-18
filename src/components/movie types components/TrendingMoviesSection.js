@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from 'react'
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -10,14 +12,15 @@ import MovieBigCard from '../MovieBigCard'
 import KeyboardArrowLeftIcon from '@mui/icons-material/KeyboardArrowLeft';
 import axios from 'axios';
 import SwiperCore, { Autoplay } from 'swiper';
+import { Link } from 'react-router-dom';
 
 SwiperCore.use([Autoplay]);
-function TrendingMoviesSection() {
+function TrendingMoviesSection(props) {
     // Trending Movies
   const [getTrendMovie, setGetTrendMovie] = useState([])
   const [getTrendMovieLoading, setGetTrendMovieLoading] = useState(false)
   useEffect(() => {
-    axios.get('https://api.themoviedb.org/3/trending/movie/day?api_key=b5d2609c326586f7f753f77b085a0b31&language=en-US&page=1')
+    axios.get(`https://api.themoviedb.org/3/trending/${props.mediaType || 'movie'}/day?api_key=b5d2609c326586f7f753f77b085a0b31&language=en-US&page=1`)
     .then(res => {
       setGetTrendMovie( res.data.results )
       console.log(res.data);
@@ -31,9 +34,9 @@ function TrendingMoviesSection() {
     return (
         <div id='trending'>
                 <div className='movie-groupper-genre-title-with-see-all-btn'>
-                    <h1 className='h1-movie-groupper'>Trending Movies</h1>
+                    <Link className='home-explore-big-titles' to={`/explore/${props.mediaType}/trend`}><h1 style={{ display: 'flex', alignItems: 'center' }} className='h1-movie-groupper'>Trending {props.mediaType ==='tv' ? 'TV Show' : 'Movie'}s</h1></Link>
                     <div className='movie-groupper-see-all-btn-with-icon'>
-                        <a href>See all</a>
+                        <a>See all</a>
                         <KeyboardArrowRightIcon style={{ fontSize: '1vw'}} />
                     </div>
                 </div>
@@ -66,7 +69,7 @@ function TrendingMoviesSection() {
                         modules={[Pagination, Navigation]}
                         className="mySwiper"
                     >
-                        {getTrendMovie.slice(0, 18).map( item => <SwiperSlide><MovieBigCard title={item.title} mediaType={"movie"} movieId={item.id} releaseDate={item.release_date} rating={item.vote_average} image={`https://image.tmdb.org/t/p/original${item.backdrop_path}`} /></SwiperSlide> )}
+                        {getTrendMovie.slice(0, 18).map( item => <SwiperSlide key={item.id}><MovieBigCard title={item.title || item.original_title || item.name} mediaType={props.mediaType} movieId={item.id} releaseDate={item.release_date || item.first_air_date} rating={item.vote_average} image={`https://image.tmdb.org/t/p/original${item.backdrop_path}`} /></SwiperSlide> )}
                     </Swiper>
                 </div>
                 {/* <div style={{ display: 'flex', gap: '2vw', marginBottom: '4vh' }}>

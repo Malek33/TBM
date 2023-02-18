@@ -1,0 +1,63 @@
+.login-element-container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.login-form-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background-color: rgb(26, 26, 26); */
+    padding: 3vw 2vw;
+    border-radius: 1vw;
+    border: 1px solid rgb(70, 70, 70);
+    box-shadow: 0vw 0vw 1vw rgb(41, 40, 40);
+}
+
+.titleLabel-login{
+    margin-bottom: 0.3vw;
+}
+
+.input-form-login{
+    width: 18vw;
+    height: 2vw;
+    margin-bottom: 1vw;
+    font-size: large;
+    border: 1px solid rgb(70, 70, 70);
+    box-shadow: 0vw 0vw 0.5vw rgb(41, 40, 40);
+    border-radius: 0.5vw;
+    padding: 0vw 0.5vw;
+}
+
+.DonthaveAccountSignUp{
+    color: white;
+    transition: ease-in-out 0.5s;
+}
+
+.DonthaveAccountSignUp:hover{
+    color: red;
+}
+
+.login-submit-btn{
+    width: 18vw;
+    height: 2vw;
+    background-color: red;
+    color: white;
+    border-radius: 1vw;
+    cursor: pointer;
+}
+
+.login-socialmedia-btns{
+    display: flex;
+}
+
+.login-socialmedia-btn-btn{
+    margin: 0.5vw 1vw;
+    padding: 0.3vw 2vw 0.2vw 2vw;
+    border: 1px solid rgb(70, 70, 70);
+    box-shadow: 0vw 0vw 0.5vw rgb(41, 40, 40);
+    border-radius: 0.5vw;
+    cursor: pointer;
+}

@@ -81,3 +81,11 @@ code {
 .aside-menu-hidden-genres-container::-webkit-scrollbar-thumb:hover {
   background: #414141;
 }
+
+.appHomeOfflinePage{
+  display: flex;
+  color: #414141;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}

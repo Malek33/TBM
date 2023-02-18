@@ -1,6 +1,7 @@
 .Nav{
     background-color: #0d0c0f;
-    margin-left: 2vw;
+    margin-left: -2vw;
+    padding-left: 2vw;
     color: #5e5e62;
     display: flex;
     justify-content: space-between;
@@ -9,7 +10,7 @@
     top: 0;
     padding-bottom: 1vh;
     width: 83vw;
-    z-index: 999;
+    z-index: 1000;
 }
 
 .Nav-while-aside-menu-btn-clicked{
@@ -23,7 +24,7 @@
     top: 0;
     padding-bottom: 1vh;
     width: 94vw;
-    z-index: 10;
+    z-index: 1000;
 }
 
 ul{
@@ -61,6 +62,12 @@ ul{
 
 .ul-navbar li .navbar-a-active{
     color: white;
+    text-decoration: none;
+}
+
+.navbar-a{
+    color: #5e5e62;
+    text-decoration: none;
 }
 
 .image-profile-pic-navbar{
@@ -120,6 +127,13 @@ ul{
     font-size: 0.7vw;
 }
 
+.navbar-usermail-hide{
+    background-color: gray ;
+    color: gray ;
+    font-size: 0.7vw;
+    border-radius: 100vw;
+}
+
 .navbar-usersection-name-image-mail{
     width: 16vw;
     margin-right: 2vw;
@@ -159,16 +173,43 @@ ul{
     max-height: 50vh;
     overflow-x: hidden;
     overflow-y: auto;
-    z-index: 99999999;
+    z-index: 1000;
 }
 
 .navbar-inner-search-results{
     display: flex;
     gap: 1vw;
     margin-bottom: 2vh;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
 }
 
 .navbar-search-results-details-image{
     width: 4vw;
     border-radius: 0.5vw;
+}
+
+.navBarParamsWindow-container{
+    position: absolute;
+    top: 6vh;
+    margin-left: 2.8vw;
+    background-color: #1a161f;
+    padding: 0 0.5vw;
+}
+
+.navBarParamsWindow-container p{
+    cursor: pointer;
+}
+
+@media only screen and (max-width: 768px) {
+
+    .Nav{
+        display: none;
+    }
+
+    .Nav-while-aside-menu-btn-clicked{
+        display: none;
+    }
+
 }

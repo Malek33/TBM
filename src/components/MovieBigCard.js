@@ -1,3 +1,4 @@
+/* eslint-disable jsx-a11y/anchor-is-valid */
 import React from 'react'
 import './style/MovieCards.css'
 import AddIcon from '@mui/icons-material/Add';
@@ -22,8 +23,8 @@ function MovieBigCard(props) {
                         </div>
                     </Link>
                     <div className='movie-card-btns'>
-                        <a className='movie-card-btn-watch-now' href>Watch now</a>
-                        <a href className='movie-card-btn-add'><AddIcon style={{ fontSize: '1.3vw' }}/></a>
+                        <a className='movie-card-btn-watch-now'>Watch now</a>
+                        <a className='movie-card-btn-add'><AddIcon style={{ fontSize: '1.3vw' }}/></a>
                     </div>
                 </div>
             </div>

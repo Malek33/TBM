@@ -50,6 +50,7 @@
     transform: scale(0.9);
     display: flex;
     margin-left: -2vw;
+    user-select: none;
 }
 
 .movie-details-circularProgressbar{
@@ -190,6 +191,10 @@
     margin-top: 2vh;
 }
 
+.movie-details-title-btns-ex{
+    width: 40vw;
+}
+
 .movie-details-title-btns-ex .movie-details-btns a{
     display: flex;
     align-items: center;
@@ -291,3 +296,49 @@
     display: flex;
     justify-content: center;
 }
+
+
+/* Popup style */
+.popup-box {
+    position: fixed;
+    background: #00000050;
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    z-index: 100;
+  }
+
+  .box {
+    color: white;
+    position: relative;
+    width: 70%;
+    margin: 0 auto;
+    height: auto;
+    max-height: 70vh;
+    margin-top: calc(100vh - 85vh - 20px);
+    background: rgb(27, 27, 27);
+    border-radius: 4px;
+    padding: 20px;
+    border: 1px solid black;
+    overflow: auto;
+  }
+
+  .close-icon {
+    content: "\2715";
+    color: white;
+    cursor: pointer;
+    position: fixed;
+    right: calc(15% - 30px);
+    top: calc(100vh - 85vh - 33px);
+    background: red;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    line-height: 20px;
+    text-align: center;
+    border: 1px solid red;
+    font-size: 20px;
+  }
+  
+  /* /pop up from google */

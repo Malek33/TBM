@@ -14,7 +14,7 @@ function MoviesGroupper() {
         document.title = `The Box Movies`;
       }, []);
 
-    window.localStorage.setItem("navMediaType", "movie")
+    window.localStorage.setItem("navMediaType", "tv")
     window.dispatchEvent(new Event("storage"));
 
     window.localStorage.setItem("asideMenuSection", "home")
@@ -22,10 +22,10 @@ function MoviesGroupper() {
 
     return (
         <div className='Movies-groupper-big-container'>
-            <TrendingMoviesSection mediaType={'movie'} />
-            <PopularMoviesSection mediaType={'movie'} />
-            <TopRatedMoviesSection mediaType={'movie'} />
-            <LatestMovies mediaType={'movie'} />
+            <TrendingMoviesSection mediaType={'tv'} />
+            <PopularMoviesSection mediaType={'tv'} />
+            <TopRatedMoviesSection mediaType={'tv'} />
+            <LatestMovies mediaType={'tv'} />
         </div>
     )
 }

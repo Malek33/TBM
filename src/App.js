@@ -1,12 +1,34 @@
 /* eslint-disable no-unused-vars */
 import React, { useState, useEffect } from "react";
-import { Route, Routes } from "react-router-dom";
+import { Route, Routes, Link } from "react-router-dom";
 import AsideMenu from "./components/AsideMenu";
 import Navbar from "./components/Navbar";
 import MoviesGroupper from './components/MoviesGroupper';
+import TvShowsGroupper from './components/TvShowsGroupper'
 import P404 from "./components/P404";
 import MovieDetails from "./components/MovieDetails";
 import MediaSearch from "./components/MediaSearch";
+import GenrePage from "./components/GenrePage";
+import AppfuncHomeMovieGender from "./components/AppfuncHomeMovieGender";
+import Footer from "./components/Footer";
+import { Offline, Online } from "react-detect-offline";
+import connctionLostImage from './img/connection_lost.png'
+import './index.css'
+import ExploreMovies from './components/ExploreMovies'
+
+import Help from "./components/asideMenu-components/Help";
+import Discover from "./components/asideMenu-components/Discover";
+import Community from "./components/asideMenu-components/Community";
+import Upcoming from "./components/asideMenu-components/Upcoming";
+import Recent from "./components/asideMenu-components/Recent";
+import Favorites from "./components/asideMenu-components/Favorites";
+import Bookmarked from "./components/asideMenu-components/Bookmarked";
+import TopRated from "./components/asideMenu-components/TopRated";
+import Settings from "./components/asideMenu-components/Settings";
+import LoadingCubes from "./components/tools-components/loading-cubes/LoadingCubes";
+import Profile from "./components/userData/Profile";
+import Login from "./components/userData/Login";
+import Signup from "./components/userData/Signup";
 
 function App() {
 
@@ -16,30 +38,7 @@ function App() {
     window.addEventListener('storage', () => {
       setHideAsideMenu(window.localStorage.getItem("AsideMenuVisibility"))
   })
-    const AppfuncHomeMovieGender = () => {
-      return(
-      <div className={ hideAsideMenu === "show" ? "genres-container" : "aside-menu-hidden-genres-container" } >
-        <a className={ movieGenderisActive === 'Action' ? 'aside-menu-genre-btn-active' : 'aside-menu-genre-btn' } onClick={ () => movieGenderisActive === 'Action' ? setMovieGenderisActive('') : setMovieGenderisActive('Action') } href>Action</a>
-        <a className={ movieGenderisActive === 'Adventure' ? 'aside-menu-genre-btn-active' : 'aside-menu-genre-btn' } onClick={ () => movieGenderisActive === 'Adventure' ? setMovieGenderisActive('') : setMovieGenderisActive('Adventure') } href>Adventure</a>
-        <a className={ movieGenderisActive === 'Animation' ? 'aside-menu-genre-btn-active' : 'aside-menu-genre-btn' } onClick={ () => movieGenderisActive === 'Animation' ? setMovieGenderisActive('') : setMovieGenderisActive('Animation') } href>Animation</a>
-        <a className={ movieGenderisActive === 'Comedy' ? 'aside-menu-genre-btn-active' : 'aside-menu-genre-btn' } onClick={ () => movieGenderisActive === 'Comedy' ? setMovieGenderisActive('') : setMovieGenderisActive('Comedy') } href>Comedy</a>
-        <a className={ movieGenderisActive === 'Crime' ? 'aside-menu-genre-btn-active' : 'aside-menu-genre-btn' } onClick={ () => movieGenderisActive === 'Crime' ? setMovieGenderisActive('') : setMovieGenderisActive('Crime') } href>Crime</a>
-        <a className={ movieGenderisActive === 'Documentary' ? 'aside-menu-genre-btn-active' : 'aside-menu-genre-btn' } onClick={ () => movieGenderisActive === 'Documentary' ? setMovieGenderisActive('') : setMovieGenderisActive('Documentary') } href>Documentary</a>
-        <a className={ movieGenderisActive === 'Drama' ? 'aside-menu-genre-btn-active' : 'aside-menu-genre-btn' } onClick={ () => movieGenderisActive === 'Drama' ? setMovieGenderisActive('') : setMovieGenderisActive('Drama') } href>Drama</a>
-        <a className={ movieGenderisActive === 'Family' ? 'aside-menu-genre-btn-active' : 'aside-menu-genre-btn' } onClick={ () => movieGenderisActive === 'Family' ? setMovieGenderisActive('') : setMovieGenderisActive('Family') } href>Family</a>
-        <a className={ movieGenderisActive === 'Fantasy' ? 'aside-menu-genre-btn-active' : 'aside-menu-genre-btn' } onClick={ () => movieGenderisActive === 'Fantasy' ? setMovieGenderisActive('') : setMovieGenderisActive('Fantasy') } href>Fantasy</a>
-        <a className={ movieGenderisActive === 'History' ? 'aside-menu-genre-btn-active' : 'aside-menu-genre-btn' } onClick={ () => movieGenderisActive === 'History' ? setMovieGenderisActive('') : setMovieGenderisActive('History') } href>History</a>
-        <a className={ movieGenderisActive === 'Horror' ? 'aside-menu-genre-btn-active' : 'aside-menu-genre-btn' } onClick={ () => movieGenderisActive === 'Horror' ? setMovieGenderisActive('') : setMovieGenderisActive('Horror') } href>Horror</a>
-        <a className={ movieGenderisActive === 'Music' ? 'aside-menu-genre-btn-active' : 'aside-menu-genre-btn' } onClick={ () => movieGenderisActive === 'Music' ? setMovieGenderisActive('') : setMovieGenderisActive('Music') } href>Music</a>
-        <a className={ movieGenderisActive === 'Mystery' ? 'aside-menu-genre-btn-active' : 'aside-menu-genre-btn' } onClick={ () => movieGenderisActive === 'Mystery' ? setMovieGenderisActive('') : setMovieGenderisActive('Mystery') } href>Mystery</a>
-        <a className={ movieGenderisActive === 'Romance' ? 'aside-menu-genre-btn-active' : 'aside-menu-genre-btn' } onClick={ () => movieGenderisActive === 'Romance' ? setMovieGenderisActive('') : setMovieGenderisActive('Romance') } href>Romance</a>
-        <a className={ movieGenderisActive === 'ScienceFiction' ? 'aside-menu-genre-btn-active' : 'aside-menu-genre-btn' } onClick={ () => movieGenderisActive === 'ScienceFiction' ? setMovieGenderisActive('') : setMovieGenderisActive('ScienceFiction') } href>ScienceFiction</a>
-        <a className={ movieGenderisActive === 'Thriller' ? 'aside-menu-genre-btn-active' : 'aside-menu-genre-btn' } onClick={ () => movieGenderisActive === 'Thriller' ? setMovieGenderisActive('') : setMovieGenderisActive('Thriller') } href>Thriller</a>
-        <a className={ movieGenderisActive === 'TVMovie' ? 'aside-menu-genre-btn-active' : 'aside-menu-genre-btn' } onClick={ () => movieGenderisActive === 'TVMovie' ? setMovieGenderisActive('') : setMovieGenderisActive('TVMovie') } href>TVMovie</a>
-        <a className={ movieGenderisActive === 'War' ? 'aside-menu-genre-btn-active' : 'aside-menu-genre-btn' } onClick={ () => movieGenderisActive === 'War' ? setMovieGenderisActive('') : setMovieGenderisActive('War') } href>War</a>
-        <a className={ movieGenderisActive === 'Western' ? 'aside-menu-genre-btn-active' : 'aside-menu-genre-btn' } onClick={ () => movieGenderisActive === 'Western' ? setMovieGenderisActive('') : setMovieGenderisActive('Western') } href>Western</a>
-      </div>
-    )}
+
 
     const AppfuncMediaPage = (props) => {
       return (
@@ -48,10 +47,22 @@ function App() {
           <div style={ hideAsideMenu === "show" ? { marginLeft: '16vw' } : { marginLeft: '5vw' } }>
             <Navbar />
             <div style={{ marginTop: '9vh' }}>
-              { props.pageName === "MoviesGroupper" ? <div><AppfuncHomeMovieGender/><br/></div> : null}
-              <props.page/>
+              {/* <Offline>
+                <br/>
+                <div className="appHomeOfflinePage">
+                  <img style={{width: '20vw'}} src={connctionLostImage} alt="connection lost" />
+                  <h1>Your'e Offline</h1>
+                </div>
+              </Offline>
+              <Online> */}
+                { props.showGenreBar ? <div><AppfuncHomeMovieGender/><br/></div> : null}
+                <props.page/>
+                <img style={{ display: 'none' }} src={connctionLostImage} alt="connection lost" />
+              {/* </Online> */}
             </div>
           </div>
+          <br/>
+          {/* <Footer/> */}
         </div>
       )
     }
@@ -61,9 +72,32 @@ function App() {
   return (
     <div className="App">
       <Routes>
-        <Route path={"/"} element={<AppfuncMediaPage pageName={"MoviesGroupper"} page={MoviesGroupper} />}/>
-        <Route path={"/movieDtails/:mediaType/:id"} element={<AppfuncMediaPage page={MovieDetails} />}/>
-        <Route path={"/search/:keyword"} element={<AppfuncMediaPage page={MediaSearch} />}/>
+        <Route path={"/"} element={<AppfuncMediaPage showGenreBar={true} pageName={"MoviesGroupper"} page={MoviesGroupper} />}/>
+        <Route path={"/movie"} element={<AppfuncMediaPage showGenreBar={true} pageName={"MoviesGroupper"} page={MoviesGroupper} />}/>
+        <Route path={"/tv"} element={<AppfuncMediaPage showGenreBar={true} pageName={"TvShowsGroupper"} page={TvShowsGroupper} />}/>
+
+        <Route path={"/discover"} element={<AppfuncMediaPage showGenreBar={true} pageName={"Discover"} page={Discover} />}/>
+        <Route path={"/community"} element={<AppfuncMediaPage showGenreBar={false} pageName={"Community"} page={Community} />}/>
+        <Route path={"/upcoming"} element={<AppfuncMediaPage showGenreBar={false} pageName={"Upcoming"} page={Upcoming} />}/>
+        <Route path={"/recent"} element={<AppfuncMediaPage showGenreBar={false} pageName={"Recent"} page={Recent} />}/>
+        <Route path={"/favorites"} element={<AppfuncMediaPage showGenreBar={false} pageName={"Favorites"} page={Favorites} />}/>
+        <Route path={"/bookmarked"} element={<AppfuncMediaPage showGenreBar={false} pageName={"Bookmarked"} page={Bookmarked} />}/>
+        <Route path={"/top-rated"} element={<AppfuncMediaPage showGenreBar={false} pageName={"TopRated"} page={TopRated} />}/>
+        <Route path={"/settings"} element={<AppfuncMediaPage showGenreBar={false} pageName={"Settings"} page={Settings} />}/>
+        <Route path={"/help"} element={<AppfuncMediaPage showGenreBar={false} pageName={"Help"} page={Help} />}/>
+
+        <Route path={"/explore/:mediaType/:section"} element={<AppfuncMediaPage showGenreBar={true} pageName={"ExploreMovies"} page={ExploreMovies} />}/>
+        <Route path={"/genre/:id"} element={<AppfuncMediaPage showGenreBar={true} pageName={"GenrePage"} page={GenrePage} />}/>
+        <Route path={"/movieDtails/:mediaType/:id"} showGenreBar={false} pageName={"MovieDetails"} element={<AppfuncMediaPage page={MovieDetails} />}/>
+        <Route path={"/movieDtails/:mediaType/:id/season/:seasonNum"} showGenreBar={false} pageName={"MovieDetails"} element={<AppfuncMediaPage page={MovieDetails} />}/>
+        <Route path={"/movieDtails/:mediaType/:id/season/:seasonNum/episode/:episodeNumber"} showGenreBar={false} pageName={"MovieDetails"} element={<AppfuncMediaPage page={MovieDetails} />}/>
+        <Route path={"/search/:keyword"} showGenreBar={false} pageName={"MediaSearch"} element={<AppfuncMediaPage page={MediaSearch} />}/>
+        <Route path={"/loader"} showGenreBar={false} pageName={"LoadingCubes"} element={<AppfuncMediaPage page={LoadingCubes} />}/>
+
+        <Route path={"/profile"} showGenreBar={false} pageName={"Profile"} element={<AppfuncMediaPage page={Profile} />}/>
+        <Route path={"/login"} element={<Login/>}/>
+        <Route path={"/signup"} element={<Signup/>}/>
+        
         <Route path={"*"} element={<P404/>}/>
       </Routes>
     </div>
